@@ -46,25 +46,36 @@
 
 // button.style.backgroundColor = "red"
 
-const guests = document.querySelector("ul")
+// const guests = document.querySelector("ul")
 
-const newGuest = document.createElement("li")
+// const newGuest = document.createElement("li")
 
-newGuest.classList.add("guest")
+// newGuest.classList.add("guest")
 
-const guestName = document.createElement("span")
+// const guestName = document.createElement("span")
 
-guestName.textContent = "Diego"
+// guestName.textContent = "Diego"
 
 
-//append adiciona após o último filho
-newGuest.append(guestName)
-//prepend adiciona antes
-newGuest.prepend(guestName)
-//permite apenas receber um valor
-newGuest.appendChild(guestName)
+// //append adiciona após o último filho
+// newGuest.append(guestName)
+// //prepend adiciona antes
+// newGuest.prepend(guestName)
+// //permite apenas receber um valor
+// newGuest.appendChild(guestName)
 
-console.log(newGuest)
+// console.log(newGuest)
 
-guests.prepend(newGuest)
+// guests.prepend(newGuest)
+
+const input = document.querySelector("input")
+
+input.setAttribute('disabled', true)
+
+input.setAttribute('type', 'file')
+
+input.removeAttribute('id')
+
+
+
 
