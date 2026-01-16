@@ -76,32 +76,53 @@
 
 // input.removeAttribute('id')
 
-window.addEventListener("load", () => {
-    console.log("A página foi carregada!")
-})
+// window.addEventListener("load", () => {
+//     console.log("A página foi carregada!")
+// })
 
-addEventListener("click", (event) => {
+// addEventListener("click", (event) => {
+//     event.preventDefault()
+
+//     console.log(event.target.textContent)
+// })
+
+// const ul = document.querySelector("ul")
+
+// ul.addEventListener("scroll", (event) => {
+//     //console.log(ul.scrollTop)
+
+//     if(ul.scrollTop > 300){
+//         console.log("final da lista")
+
+//         ul.scrollTo({
+//             top: 0,
+//             behavior: "smooth"
+//         })
+//     }
+// })
+
+// const button = document.querySelector("button")
+// button.addEventListener("click", (event) => {
+//     console.log("clicou")
+// })
+
+const form = document.querySelector("form")
+
+//on executa apenas o ultimo 
+form.onsubmit= (event) => {
     event.preventDefault()
+    console.log("Submit no formulario #1")
+}
+form.onsubmit= (event) => {
+    event.preventDefault()
+    console.log("Submit no formulario #2")
+}
 
-    console.log(event.target.textContent)
+//add executada todos criados 
+
+form.addEventListener("submit", (event) => {
+    console.log("Submit no formulario #3")
 })
-
-const ul = document.querySelector("ul")
-
-ul.addEventListener("scroll", (event) => {
-    //console.log(ul.scrollTop)
-
-    if(ul.scrollTop > 300){
-        console.log("final da lista")
-
-        ul.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    }
-})
-
-const button = document.querySelector("button")
-button.addEventListener("click", (event) => {
-    console.log("clicou")
+form.addEventListener("submit", (event) => {
+    console.log("Submit no formulario #4")
 })
