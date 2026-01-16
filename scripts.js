@@ -68,14 +68,40 @@
 
 // guests.prepend(newGuest)
 
-const input = document.querySelector("input")
+// const input = document.querySelector("input")
 
-input.setAttribute('disabled', true)
+// input.setAttribute('disabled', true)
 
-input.setAttribute('type', 'file')
+// input.setAttribute('type', 'file')
 
-input.removeAttribute('id')
+// input.removeAttribute('id')
 
+window.addEventListener("load", () => {
+    console.log("A página foi carregada!")
+})
 
+addEventListener("click", (event) => {
+    event.preventDefault()
 
+    console.log(event.target.textContent)
+})
 
+const ul = document.querySelector("ul")
+
+ul.addEventListener("scroll", (event) => {
+    //console.log(ul.scrollTop)
+
+    if(ul.scrollTop > 300){
+        console.log("final da lista")
+
+        ul.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+})
+
+const button = document.querySelector("button")
+button.addEventListener("click", (event) => {
+    console.log("clicou")
+})
